@@ -1,0 +1,55 @@
+﻿@model WebApplication1.Models.Book
+<center>
+    <h1 class="text-success">@Model.Name</h1><br />
+</center>
+<br />
+
+<table>
+    <tr>
+        <th rowspan="3">
+            <div id="profile" class="column half">
+                <img src="@Model.Image" width="250" height="350" /> <br />
+
+            </div>
+        </th>
+        
+    </tr>
+    <tr>
+        <th>
+            <div class="card-body">
+                <h3 >Description</h3>
+                <p class="font-italic">@Model.detail</p>
+            </div>
+        </th>
+       
+    </tr>
+    <tr>
+        <td>
+            <div class="column last card-body">
+                <p>Category: @Model.Category.Name</p>
+                <p>Author: @Model.Author</p>
+                <p>Tpye: @Model.Type</p>
+                <p style="color:red">Price: @Model.Price</p>
+            </div>
+        </td>
+        
+           
+    </tr>
+   
+    <tr>
+        <th>
+            <div>
+                <h5><a href="#" onclick="return confirm('@User.Identity.Name bạn đã mua thành công sách @Model.Name'); ">Buy Now</a></h5>
+            </div>
+        </th>
+       
+        
+       
+    </tr>
+</table>
+
+
+
+
+
+
